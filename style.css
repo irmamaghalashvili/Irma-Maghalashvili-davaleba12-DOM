@@ -1,0 +1,41 @@
+ol, ul {
+    list-style: none;
+}
+.form-section {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+
+}
+.add-btn {
+    margin: 10px;
+    color: blue;
+    border: none;
+    background-color: aquamarine;
+}
+.fa-delete-left {
+    margin: 10px;
+    color: red;
+    background-color: beige;
+}
+.li-element::before {
+    content: url('./circle-check-regular.svg');
+    display: inline-block;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+}
+.input-focus {
+    background-color: rgb(196, 212, 196);
+    color: rgb(1, 69, 69);
+}
