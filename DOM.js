@@ -52,3 +52,16 @@ newForm.addEventListener('submit', function(event) {
 deleteAll.addEventListener('click', function () {
   ulElement.innerHTML = ' ';
 });
+
+
+
+
+// burger bar
+
+let navigation = document.getElementById('navigation');
+let burger = document.getElementById('burger');
+
+burger.addEventListener('click', function () {
+  navigation.classList.toggle('active-nav');
+  burger.classList.toggle('active-bar');
+})
