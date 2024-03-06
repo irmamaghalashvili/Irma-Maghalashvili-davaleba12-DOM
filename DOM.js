@@ -65,3 +65,36 @@ burger.addEventListener('click', function () {
   navigation.classList.toggle('active-nav');
   burger.classList.toggle('active-bar');
 })
+
+
+// fetch
+
+let album = document.getElementById('album');
+
+fetch('https://jsonplaceholder.typicode.com/photos', {
+  method: 'GET',
+})
+
+.then(function (resp) {
+  if (resp.status !== 200) {
+    throw new Error;
+  }
+  return resp.json();
+})
+.then(function(respData) {
+  let div = document.createElement('div');
+  div.classList.add('img-div');
+  respData.forEach((element) => {
+    let img = document.createElement('img');
+    img.src = element.url;
+    img.classList.add('img-box');
+    let p = document.createElement('p');
+    p.innerText = element.title;
+    div.appendChild(p);
+    div.appendChild(img);
+  });
+  album.appendChild(div);
+})
+.catch(function(error) {
+  console.log(error);
+});

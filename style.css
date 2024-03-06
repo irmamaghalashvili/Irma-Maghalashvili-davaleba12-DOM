@@ -116,3 +116,17 @@ ol, ul {
     background-color: rgb(196, 212, 196);
     color: rgb(1, 69, 69);
 }
+
+/* album */
+.album {
+    margin: 0 auto;
+}
+.img-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.img-box {
+    max-width: 100px;
+    width: 100%;
+}
